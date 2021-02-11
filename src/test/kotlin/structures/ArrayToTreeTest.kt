@@ -7,19 +7,19 @@ import print
 
 class ArrayToTreeTest {
 
-    @ParameterizedTest
-    @MethodSource("provideTestData")
-    fun test(testData: TestData) {
-        val data = testData.data.clone()
-        val expected = testData.expected
-        val root = array2Tree(data)
-        Assertions.assertEquals(
-            expected,
-            root,
-            "array2Tree for ${data.print()} should be $expected but " +
-                    "was $root instead"
-        )
-    }
+//    @ParameterizedTest
+//    @MethodSource("provideTestData")
+//    fun test(testData: TestData) {
+//        val data = testData.data.clone()
+//        val expected = testData.expected
+//        val root = array2Tree(data)
+//        Assertions.assertEquals(
+//            expected,
+//            root,
+//            "array2Tree for ${data.print()} should be $expected but " +
+//                    "was $root instead"
+//        )
+//    }
 
     companion object {
 

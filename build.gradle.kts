@@ -19,6 +19,12 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-params:5.7.1")
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(14))
+    }
+}
+
 tasks.test {
     useJUnitPlatform()
     testLogging {
@@ -26,7 +32,7 @@ tasks.test {
     }
 }
 
-tasks.withType<KotlinCompile>() {
+tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "14"
 }
 
