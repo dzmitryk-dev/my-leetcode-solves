@@ -1,4 +1,4 @@
-package arrays
+package interview.arrays
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.params.ParameterizedTest

@@ -1,4 +1,4 @@
-package arrays
+package interview.arrays
 
 data class Point(
     val x: Int, val y:Int

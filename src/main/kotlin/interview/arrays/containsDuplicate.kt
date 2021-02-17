@@ -1,4 +1,4 @@
-package arrays
+package interview.arrays
 
 fun containsDuplicate(nums: IntArray): Boolean {
     val set = hashSetOf<Int>()

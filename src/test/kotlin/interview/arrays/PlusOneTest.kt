@@ -1,22 +1,21 @@
-package arrays
+package interview.arrays
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.MethodSource
 
-class MoveZeroesTest {
+class PlusOneTest {
 
     @ParameterizedTest
     @MethodSource("provideTestData")
     fun test(testData: TestData) {
-        val data = testData.data.clone()
+        val data = testData.data
         val expected = testData.expected
-        moveZeroes(data)
+        val actual = plusOne(data)
         Assertions.assertArrayEquals(
             expected,
-            data,
-            "moveZeroes for ${testData.data.joinToString(",", "[", "]")} should be $expected but was" +
-                    "${data.joinToString(",", "[", "]")} instead"
+            actual,
+            "plusOne for ${data.joinToString(",", "[", "]")} should be $expected"
         )
     }
 
@@ -51,9 +50,10 @@ class MoveZeroesTest {
 
         @JvmStatic
         fun provideTestData() = listOf(
-            TestData(intArrayOf(0,1,0,3,12), intArrayOf(1,3,12,0,0)),
-            TestData(intArrayOf(0,1,0,0,3,12), intArrayOf(1,3,12,0,0,0)),
-            TestData(intArrayOf(1,0), intArrayOf(1,0))
+            TestData(intArrayOf(1,2,3), intArrayOf(1,2,4)),
+            TestData(intArrayOf(4,3,2,1),intArrayOf(4,3,2,2)),
+            TestData(intArrayOf(0), intArrayOf(1)),
+            TestData(intArrayOf(9, 9), intArrayOf(1, 0, 0))
         )
     }
 }

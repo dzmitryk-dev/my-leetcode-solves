@@ -1,4 +1,4 @@
-package arrays
+package interview.arrays
 
 fun moveZeroes(nums: IntArray) {
     val size = nums.size

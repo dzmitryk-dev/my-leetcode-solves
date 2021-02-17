@@ -1,4 +1,4 @@
-package arrays
+package interview.arrays
 
 fun twoSum(nums: IntArray, target: Int): IntArray {
     if (nums.size == 2) return intArrayOf(0, 1)

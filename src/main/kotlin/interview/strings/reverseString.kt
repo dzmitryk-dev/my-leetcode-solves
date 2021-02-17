@@ -1,4 +1,4 @@
-package strings
+package interview.strings
 
 fun reverseString(s: CharArray) {
     var index = 0

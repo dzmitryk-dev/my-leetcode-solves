@@ -1,4 +1,4 @@
-package arrays
+package interview.arrays
 
 fun singleNumber(nums: IntArray): Int {
     val size = nums.size

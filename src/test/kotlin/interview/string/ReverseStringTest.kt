@@ -1,10 +1,10 @@
-package string
+package interview.string
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.MethodSource
 import print
-import strings.reverseString
+import interview.strings.reverseString
 
 class ReverseStringTest {
 

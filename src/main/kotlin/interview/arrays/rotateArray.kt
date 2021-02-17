@@ -1,4 +1,4 @@
-package arrays
+package interview.arrays
 
 fun rotate(nums: IntArray, k: Int) {
     val size = nums.size

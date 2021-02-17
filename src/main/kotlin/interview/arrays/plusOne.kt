@@ -1,4 +1,4 @@
-package arrays
+package interview.arrays
 
 fun plusOne(digits: IntArray): IntArray {
     var index = digits.lastIndex

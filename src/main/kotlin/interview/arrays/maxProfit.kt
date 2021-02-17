@@ -1,4 +1,4 @@
-package arrays
+package interview.arrays
 
 fun maxProfit(prices: IntArray): Int {
     var currentMinIndex = 0
