@@ -3,6 +3,7 @@ package interview.arrays
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.MethodSource
+import print
 
 class RotateImageTest {
 
@@ -15,8 +16,9 @@ class RotateImageTest {
         Assertions.assertArrayEquals(
             expected,
             data,
-            "rotate for ${testData.data.joinToString(",", "[", "]")} should be ${expected.joinToString(",", "[", "]")} but " +
-                    "was ${data.joinToString(",", "[", "]")} instead"
+            "rotate for ${testData.data.joinToString(",", "[", "]") { it.print() }} " +
+                    "should be ${expected.joinToString(",", "[", "]") { it.print() }} " +
+                    "but was ${data.joinToString(",", "[", "]") { it.print() }} instead"
         )
     }
 
@@ -27,7 +29,8 @@ class RotateImageTest {
             val expected: Array<IntArray>
         ) {
             override fun toString(): String {
-                return "input = ${data.joinToString(",", "[", "]")}, expected = ${expected.joinToString(",", "[", "]")}"
+                return "input = ${data.joinToString(",", "[", "]") { it.print() }}, " +
+                        "expected = ${expected.joinToString(",", "[", "]") { it.print() }}"
             }
         }
 
