@@ -21,5 +21,6 @@ fun searchMatrix(matrix: Array<IntArray>, target: Int): Boolean {
             search(matrix, target, row + 1, col - 1)
         }
     }
+    return false
 }
 
