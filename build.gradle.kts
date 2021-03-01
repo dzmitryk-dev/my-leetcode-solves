@@ -21,7 +21,7 @@ dependencies {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(14))
+        languageVersion.set(JavaLanguageVersion.of(15))
     }
 }
 
@@ -33,9 +33,5 @@ tasks.test {
 }
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "14"
-}
-
-application {
-    mainClassName = "MainKt"
+    kotlinOptions.jvmTarget = "15"
 }
