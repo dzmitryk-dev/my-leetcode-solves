@@ -1,6 +1,7 @@
 package structures
 
 import pow2
+import java.lang.StringBuilder
 
 class TreeNode(var `val`: Int,
     var left: TreeNode? = null,
@@ -17,6 +18,15 @@ fun TreeNode.toIntArray(): IntArray {
     return mutableListOf<Int>().also { list ->
         walk { list.add(it) }
     }.toIntArray()
+}
+
+fun TreeNode.print(): String {
+    val builder = StringBuilder()
+    this.walk {
+        builder.takeIf { builder.isNotEmpty() }?.append(", ")
+        builder.append(it)
+    }
+    return builder.insert(0, "[").append("]").toString()
 }
 
 /**
@@ -53,4 +63,18 @@ fun array2Tree(arr: Array<Int?>): TreeNode {
         )
     }
     return buildNode(arr.asList())!!
+}
+
+fun TreeNode.copy(): TreeNode {
+    val newRoot = TreeNode(this.`val`)
+    fun copyRecursive(node: TreeNode?, newNode: TreeNode?) {
+        node?.left?.let { l ->
+            copyRecursive(l, TreeNode(l.`val`).also { n -> newNode?.left = n })
+        }
+        node?.right?.let { r ->
+            copyRecursive(r, TreeNode(r.`val`).also { n -> newNode?.right = n })
+        }
+    }
+    copyRecursive(this, newRoot)
+    return newRoot
 }
