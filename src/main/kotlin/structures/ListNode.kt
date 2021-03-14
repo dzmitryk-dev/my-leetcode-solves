@@ -13,14 +13,23 @@ fun IntArray.toMyList(): ListNode? =
         }
     }
 
+fun ListNode.toIntArray(): IntArray {
+    tailrec fun toArray(node: ListNode, list: MutableList<Int> = mutableListOf()): IntArray {
+        list.add(node.`val`)
+        return if (node.next == null) list.toIntArray()
+        else toArray(node.next!!, list)
+    }
+    return toArray(this)
+}
+
 fun ListNode.print(): String {
     tailrec fun walk(node: ListNode?, acc: StringBuilder): String {
         if (acc.isEmpty()) {
-            acc.append("[ ")
+            acc.append("[")
         }
         acc.append(node?.`val`)
         return if (node?.next == null) {
-            acc.append(" ]").toString()
+            acc.append("]").toString()
         } else {
             walk(node.next, acc.append(", "))
         }
