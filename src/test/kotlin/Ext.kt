@@ -10,3 +10,5 @@ fun CharArray.print(): String =
 inline fun <reified T> Array<T>.print(): String =
     this.joinToString("," , "[", "]")
 
+fun <T> List<List<T>>.print() =
+    this.joinToString(",", "[", "]") { "$it"}
