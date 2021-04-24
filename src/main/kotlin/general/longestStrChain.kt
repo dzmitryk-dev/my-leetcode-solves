@@ -1,3 +1,5 @@
+package general
+
 /**
  * https://leetcode.com/problems/longest-string-chain/
  */
