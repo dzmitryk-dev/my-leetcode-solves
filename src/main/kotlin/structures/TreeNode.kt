@@ -10,8 +10,8 @@ class TreeNode(var `val`: Int,
 
 fun TreeNode.walk(action: (Int) -> Unit) {
     left?.walk(action)
-    right?.walk(action)
     action(`val`)
+    right?.walk(action)
 }
 
 fun TreeNode.toIntArray(): IntArray {
