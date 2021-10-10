@@ -21,7 +21,7 @@ dependencies {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(15))
+        languageVersion.set(JavaLanguageVersion.of(13))
     }
 }
 
@@ -33,7 +33,7 @@ tasks.test {
 }
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "15"
+    kotlinOptions.jvmTarget = "13"
     kotlinOptions.useIR = true
     kotlinOptions.apiVersion = "1.3"
 }
