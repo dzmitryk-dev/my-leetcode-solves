@@ -28,7 +28,8 @@ class IsPalindromeTest {
         @JvmStatic
         fun provideTestData() = listOf(
             TestData("A man, a plan, a canal: Panama", true),
-            TestData("ab_a", true)
+            TestData("ab_a", true),
+            TestData("ab", false)
         )
     }
 }

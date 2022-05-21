@@ -62,7 +62,7 @@ fun isPalindrome(s: String): Boolean {
 
 private tailrec fun recSearch(chars: CharSequence, firstIndex: Int, lastIndex: Int): Boolean {
     // println("recSearch. chars = ${chars.subSequence(firstIndex, lastIndex)}")
-    if (lastIndex - firstIndex <= 1) {
+    if (lastIndex - firstIndex < 1) {
         return true
     }
     val first = chars[firstIndex]
