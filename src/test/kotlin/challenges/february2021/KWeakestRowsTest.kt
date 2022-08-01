@@ -48,7 +48,7 @@ class KWeakestRowsTest {
                 intArrayOf(1,1,1,1,0),
                 intArrayOf(1,0,0,0,0),
                 intArrayOf(1,1,0,0,0),
-                intArrayOf(1,1,1,1,1),
+                intArrayOf(1,1,1,1,1)
             ), 3, intArrayOf(2, 0, 3)),
             /*
                 Input: mat = [[1,0,0,0],
@@ -63,7 +63,7 @@ class KWeakestRowsTest {
                 intArrayOf(1,1,1,1),
                 intArrayOf(1,0,0,0),
                 intArrayOf(1,0,0,0)
-            ), 2, intArrayOf(0, 2)),
+            ), 2, intArrayOf(0, 2))
         )
     }
 }

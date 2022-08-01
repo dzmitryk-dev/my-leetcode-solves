@@ -37,7 +37,7 @@ class SubsetsWithDupTest {
 //            Example 2:
 //            Input: nums = [0]
 //           Output: [[],[0]]
-            TestData(intArrayOf(0), listOf(emptyList(), listOf(0))),
+            TestData(intArrayOf(0), listOf(emptyList(), listOf(0)))
         )
     }
 }

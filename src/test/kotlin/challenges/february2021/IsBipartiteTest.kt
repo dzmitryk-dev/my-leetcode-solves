@@ -50,7 +50,7 @@ class IsBipartiteTest {
                 intArrayOf(1,5,7,8,9),
                 intArrayOf(3,6,9),
                 intArrayOf(2,3,4,6,9),
-                intArrayOf(2,4,5,6,7,8),
+                intArrayOf(2,4,5,6,7,8)
             ), false),
             // [[4],[],[4],[4],[0,2,3]], true
             TestData(arrayOf(
@@ -58,8 +58,8 @@ class IsBipartiteTest {
                 intArrayOf(),
                 intArrayOf(4),
                 intArrayOf(4),
-                intArrayOf(0,2,3),
-            ), true),
+                intArrayOf(0,2,3)
+            ), true)
         )
     }
 }

@@ -30,7 +30,7 @@ class MaxAreaTest {
             TestData(intArrayOf(1, 8, 6, 2, 5, 4, 8, 3, 7), 49),
             TestData(intArrayOf(1, 1) , 1),
             TestData(intArrayOf(4, 3, 2, 1, 4), 16),
-            TestData(intArrayOf(1, 2, 1), 2),
+            TestData(intArrayOf(1, 2, 1), 2)
         )
     }
 }

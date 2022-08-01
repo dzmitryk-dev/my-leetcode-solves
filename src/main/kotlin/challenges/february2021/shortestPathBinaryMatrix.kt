@@ -21,7 +21,7 @@ fun shortestPathBinaryMatrix(grid: Array<IntArray>): Int {
     val gridSize = grid.size
     val start = Coordinate(0,0)
     val finish = Coordinate(gridSize - 1, gridSize - 1)
-    return findPath(grid, finish, 0, setOf(start), )
+    return findPath(grid, finish, 0, setOf(start) )
 }
 
 tailrec fun findPath(
@@ -29,7 +29,7 @@ tailrec fun findPath(
     finish: Coordinate,
     step: Int,
     candidates: Collection<Coordinate>,
-    visitedPoints: MutableSet<Coordinate> = mutableSetOf(),
+    visitedPoints: MutableSet<Coordinate> = mutableSetOf()
 ): Int {
     if (finish in candidates) return step + 1
     val newCandidates = candidates.flatMap { coordinate ->

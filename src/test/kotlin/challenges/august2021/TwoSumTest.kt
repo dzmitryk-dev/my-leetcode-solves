@@ -45,7 +45,7 @@ class TwoSumTest {
 //            Input: nums = [3,3], target = 6
 //            Output: [0,1]
             TestData(intArrayOf(3,3), 6, intArrayOf(0, 1)),
-            TestData(intArrayOf(3, 4, 3), 6, intArrayOf(0, 2)),
+            TestData(intArrayOf(3, 4, 3), 6, intArrayOf(0, 2))
         )
     }
 

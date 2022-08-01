@@ -38,7 +38,7 @@ class SearchMatrixTest {
                     intArrayOf(2,5,8,12,19),
                     intArrayOf(3,6,9,16,22),
                     intArrayOf(10,13,14,17,24),
-                    intArrayOf(18,21,23,26,30),
+                    intArrayOf(18,21,23,26,30)
                 ), 5, true),
             // matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 20, true
             TestData(
@@ -47,7 +47,7 @@ class SearchMatrixTest {
                     intArrayOf(2,5,8,12,19),
                     intArrayOf(3,6,9,16,22),
                     intArrayOf(10,13,14,17,24),
-                    intArrayOf(18,21,23,26,30),
+                    intArrayOf(18,21,23,26,30)
                 ), 20, false),
             // matrix = [[-5]] , target = -5, true
             TestData(
@@ -60,8 +60,8 @@ class SearchMatrixTest {
                     intArrayOf(2,5,8,12,19),
                     intArrayOf(3,6,9,16,22),
                     intArrayOf(10,13,14,17,24),
-                    intArrayOf(18,21,23,26,30),
-                ), 18, true),
+                    intArrayOf(18,21,23,26,30)
+                ), 18, true)
         )
     }
 }

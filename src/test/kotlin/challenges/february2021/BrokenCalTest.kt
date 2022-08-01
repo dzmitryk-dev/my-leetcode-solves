@@ -52,7 +52,7 @@ class BrokenCalTest {
             TestData(1, 1000000000, 39),
             // Input X = 1, Y = 1
             // Output: 0
-            TestData(1, 1, 0),
+            TestData(1, 1, 0)
         )
     }
 }

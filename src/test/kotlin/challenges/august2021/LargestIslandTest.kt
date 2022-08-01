@@ -46,7 +46,7 @@ class LargestIslandTest {
 //            Example 4:
 //            Input: grid = [[0,0],[0,0]]
 //            Output: 1
-            TestData(arrayOf(intArrayOf(0, 0), intArrayOf(0, 0)), 1),
+            TestData(arrayOf(intArrayOf(0, 0), intArrayOf(0, 0)), 1)
         )
     }
 }

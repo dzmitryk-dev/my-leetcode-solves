@@ -32,9 +32,9 @@ fun findMedianSortedArrays(nums1: IntArray, nums2: IntArray): Double {
 
     val fullSize = nums1.size + nums2.size
     return if (fullSize % 2 == 0) {
-        (mergedSequence.elementAt(fullSize / 2 - 1)!!.toDouble() + mergedSequence.elementAt(fullSize / 2).toDouble()) / 2
+        (mergedSequence.elementAt(fullSize / 2 - 1)!!.toDouble() + mergedSequence.elementAt(fullSize / 2)!!.toDouble()) / 2
     } else {
-        mergedSequence.elementAt(fullSize / 2).toDouble()
+        mergedSequence.elementAt(fullSize / 2)!!.toDouble()
     }
 }
 

@@ -50,7 +50,7 @@ class DivideWithoutDivisionTest {
             TestData(-2147483648, 2, -1073741824),
             TestData(1004958205, -2137325331, 0),
             TestData(-2147483648, - 3, 715827882),
-            TestData(-2147483648, -2147483648, 1),
+            TestData(-2147483648, -2147483648, 1)
         )
     }
 }

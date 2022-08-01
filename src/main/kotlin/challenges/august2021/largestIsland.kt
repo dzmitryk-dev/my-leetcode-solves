@@ -53,7 +53,7 @@ private tailrec fun findIsland(
     grid: Array<IntArray>,
     points: Set<Point>,
     islandId: Int,
-    islandSize: Int = 0,
+    islandSize: Int = 0
 ): Int {
     if (points.isEmpty()) {
         return islandSize

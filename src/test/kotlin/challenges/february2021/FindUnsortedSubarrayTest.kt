@@ -41,7 +41,7 @@ class FindUnsortedSubarrayTest {
 //                Example 3:
 //                Input: nums = [1]
 //                Output: 0
-                TestData(intArrayOf(1), 0),
+                TestData(intArrayOf(1), 0)
         )
     }
 }

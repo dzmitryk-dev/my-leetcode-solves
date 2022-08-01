@@ -48,7 +48,7 @@ class RemoveParenthisisTest {
             // Example 4:
             // Input: s = "(a(b(c)d)"
             // Output: "a(b(c)d)"
-            TestData("(a(b(c)d)", listOf("a(b(c)d)")),
+            TestData("(a(b(c)d)", listOf("a(b(c)d)"))
         )
     }
 

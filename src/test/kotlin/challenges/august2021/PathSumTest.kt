@@ -37,7 +37,7 @@ class PathSumTest {
                         left = TreeNode(11,
                             left = TreeNode(7),
                             right = TreeNode(2)
-                        ),
+                        )
                     ),
                     right = TreeNode(8,
                         left = TreeNode(13),
@@ -70,7 +70,7 @@ class PathSumTest {
                     right = TreeNode(-3)
                 ), -5,
                 expected = listOf(listOf(-2, -3))
-            ),
+            )
         )
     }
 }

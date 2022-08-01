@@ -61,11 +61,11 @@ class LevelOrderTest {
                                 Node(9, listOf(Node(13))),
                                 Node(10)
                             )
-                        ),
+                        )
                     )
                 ),
                 listOf(listOf(1), listOf(2, 3, 4, 5), listOf(6, 7, 8, 9, 10), listOf(11, 12, 13), listOf(14))
-            ),
+            )
 
         )
     }
