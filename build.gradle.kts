@@ -14,9 +14,10 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    testImplementation(platform("org.junit:junit-bom:5.8.2"))
+    testImplementation(platform("org.junit:junit-bom:5.9.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
-    testImplementation("org.junit.jupiter:junit-jupiter-params:5.8.2")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:5.9.0")
+    testImplementation("org.hamcrest:hamcrest-library:2.2")
 }
 
 java {
