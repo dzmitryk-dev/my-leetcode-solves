@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.7.10"
+    kotlin("jvm") version "1.9.0"
     application
 }
 
@@ -13,7 +13,6 @@ repositories {
 }
 
 dependencies {
-    implementation(kotlin("stdlib-jdk8"))
     testImplementation(platform("org.junit:junit-bom:5.9.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation("org.junit.jupiter:junit-jupiter-params:5.9.0")
@@ -22,7 +21,7 @@ dependencies {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(13))
+        languageVersion.set(JavaLanguageVersion.of(17))
     }
 }
 
@@ -34,7 +33,5 @@ tasks.test {
 }
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "13"
-    kotlinOptions.apiVersion = "1.3"
-    kotlinOptions.languageVersion = "1.4"
+    kotlinOptions.jvmTarget = "17"
 }
