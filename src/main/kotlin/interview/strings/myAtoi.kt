@@ -24,6 +24,7 @@ fun myAtoi(s: String): Int {
             State.SIGN -> if (symbol == '-') {
                 sign = -1
             }
+           else -> { }
         }
         currentState = newState
     }
