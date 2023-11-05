@@ -33,9 +33,13 @@ fun threeSum(nums: IntArray): List<List<Int>> {
                 }
                 index3++
             }
-            index2++
+            do {
+                index2++
+            } while (index2 < sortedNums.lastIndex && sortedNums[index2] == b)
         }
-        index1++
+        do {
+            index1++
+        } while (index1 < sortedNums.lastIndex && sortedNums[index1] == a)
     }
 
     return result.toList()
