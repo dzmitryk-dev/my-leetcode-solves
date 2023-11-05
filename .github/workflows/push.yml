@@ -1,4 +1,4 @@
-name: On Push Action
+name: Main Branch
 run-name: Build project
 on: [push]
 jobs:
