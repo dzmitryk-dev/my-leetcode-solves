@@ -5,17 +5,13 @@ package general.firstbadversion
  */
 class Solution : VersionControl() {
     override fun firstBadVersion(n: Int): Int {
-        return search(n)
+        return search(bad = n)
     }
 
-    private tailrec fun search(guessedValue: Int, good: Int = 0, bad: Int = Int.MAX_VALUE): Int {
-        if (bad - good == 1) return bad
+    private tailrec fun search(good: Int = 0, bad: Int): Int {
+        if (good + 1 == bad) return bad
+        val guessedValue = good + (bad - good) / 2
         val isBad = isBadVersion(guessedValue)
-        val newGuessedValue = if (isBad) {
-            good + (guessedValue - good) / 2
-        } else {
-            guessedValue + (bad - guessedValue) / 2
-        }
         val newGood = if (isBad) {
             good
         } else {
@@ -27,7 +23,6 @@ class Solution : VersionControl() {
             bad
         }
         return search(
-            guessedValue = newGuessedValue,
             good = newGood,
             bad = newBad,
         )
