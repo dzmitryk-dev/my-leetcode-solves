@@ -22,7 +22,8 @@ class FirstBadVersionTest {
             TestCase(n = 5, bad = 4),
             TestCase(n = 1, bad = 1),
             TestCase(n = 2, bad = 1),
-            TestCase(n = 2, bad = 2)
+            TestCase(n = 2, bad = 2),
+            TestCase(n = 4, bad = 2)
         )
     }
 }

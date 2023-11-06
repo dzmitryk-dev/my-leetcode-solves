@@ -5,27 +5,22 @@ package general.firstbadversion
  */
 class Solution : VersionControl() {
     override fun firstBadVersion(n: Int): Int {
-        return search(bad = n)
-    }
+        var left = 0
+        var right = n
+        var candidate = n
 
-    private tailrec fun search(good: Int = 0, bad: Int): Int {
-        if (good + 1 == bad) return bad
-        val guessedValue = good + (bad - good) / 2
-        val isBad = isBadVersion(guessedValue)
-        val newGood = if (isBad) {
-            good
-        } else {
-            guessedValue
+        var isBad = false
+        while (left <= right) {
+            candidate = left + (right - left)/2
+            isBad = isBadVersion(candidate)
+            if (isBad) {
+                right = candidate - 1
+            } else {
+                left = candidate + 1
+            }
         }
-        val newBad = if (isBad) {
-            guessedValue
-        } else {
-            bad
-        }
-        return search(
-            good = newGood,
-            bad = newBad,
-        )
+
+        return if (isBad) candidate else candidate + 1
     }
 }
 
