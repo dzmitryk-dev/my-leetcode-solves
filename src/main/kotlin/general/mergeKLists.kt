@@ -9,28 +9,21 @@ fun mergeKLists(lists: Array<ListNode?>): ListNode? {
     return lists.reduceOrNull { left, right -> mergeLists(left, right) }
 }
 
-private tailrec fun mergeLists(
+private fun mergeLists(
     left: ListNode?,
     right: ListNode?,
-    root: ListNode? = null,
-    tail: ListNode? = null
 ): ListNode? {
-    val newLeft: ListNode?
-    val newRight: ListNode?
-    val newTail: ListNode?
-    if (left == null && right == null) {
-        return root
+    if (left == null) {
+        return right
     }
-    if (left == null || (right != null && left.`val` > right.`val`)) {
-        newTail = ListNode(right!!.`val`)
-        newRight = right.next
-        newLeft = left
+    if (right == null) {
+        return left
+    }
+    return if (left.`val` < right.`val`) {
+        left.next = mergeLists(left.next, right)
+        left
     } else {
-        newTail = ListNode(left.`val`)
-        newLeft = left.next
-        newRight = right
+        right.next = mergeLists(left, right.next)
+        right
     }
-    return mergeLists(newLeft, newRight, root ?: newTail, newTail.also {
-        tail?.next = it
-    })
 }
