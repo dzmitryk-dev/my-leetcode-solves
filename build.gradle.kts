@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.9.0"
+    alias(libs.plugins.kotlin.jvm)
     application
 }
 
@@ -13,15 +13,15 @@ repositories {
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.9.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-    testImplementation("org.junit.jupiter:junit-jupiter-params:5.9.0")
-    testImplementation("org.hamcrest:hamcrest-library:2.2")
+    testImplementation(platform(libs.junit.bom))
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.junit.jupiter.params)
+    testImplementation(libs.hamcrest)
 }
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
+        languageVersion.set(JavaLanguageVersion.of(libs.versions.jvm.get()))
     }
 }
 
@@ -32,6 +32,8 @@ tasks.test {
     }
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "17"
+tasks.withType<KotlinCompile>().configureEach {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.fromTarget(libs.versions.jvm.get()))
+    }
 }

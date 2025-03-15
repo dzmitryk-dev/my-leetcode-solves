@@ -1,5 +1,7 @@
 package challenges.march2021
 
+import java.util.*
+
 /*
  https://leetcode.com/explore/challenge/card/march-leetcoding-challenge-2021/591/week-4-march-22nd-march-28th/3681/
 */
@@ -13,19 +15,17 @@ package challenges.march2021
 fun spellchecker(wordlist: Array<String>, queries: Array<String>): Array<String> {
     //Preparation
     val wordset = wordlist.toSet()
-    val caseMap = wordlist.groupBy { word -> word.toLowerCase() }
+    val caseMap = wordlist.groupBy { word -> word.lowercase(Locale.getDefault()) }
     val vowelsMap = wordlist.groupBy { word ->
-        word.toLowerCase().replaceVowels()
+        word.lowercase(Locale.getDefault()).replaceVowels()
     }
 
     return queries.map { word ->
         if (wordset.contains(word)) {
             word
         } else {
-            val wordLowerCase = word.toLowerCase()
-            caseMap[wordLowerCase]?.first() ?:
-            vowelsMap[wordLowerCase.replaceVowels()]?.first() ?:
-            ""
+            val wordLowerCase = word.lowercase(Locale.getDefault())
+            caseMap[wordLowerCase]?.first() ?: vowelsMap[wordLowerCase.replaceVowels()]?.first() ?: ""
         }
     }.toTypedArray()
 }

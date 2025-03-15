@@ -16,9 +16,9 @@ tailrec fun permutate(index: Int, strs: MutableList<CharArray>) {
             val newArray = it.clone()
             val character = it[index]
             newArray[index] = if (character.isLowerCase()) {
-                character.toUpperCase()
+                character.uppercaseChar()
             } else {
-                character.toLowerCase()
+                character.lowercaseChar()
             }
             newArray
         }.let {

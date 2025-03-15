@@ -1,0 +1,15 @@
+[versions]
+kotlin = "2.1.10"
+junit-bom = "5.9.0"
+junit-jupiter = "5.9.0"
+hamcrest = "2.2"
+jvm = "21"
+
+[libraries]
+junit-bom = { group = "org.junit", name = "junit-bom", version.ref = "junit-bom" }
+junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter" }
+junit-jupiter-params = { group = "org.junit.jupiter", name = "junit-jupiter-params", version.ref = "junit-jupiter" }
+hamcrest = { group = "org.hamcrest", name = "hamcrest-library", version.ref = "hamcrest" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
